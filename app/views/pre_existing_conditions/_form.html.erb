@@ -11,19 +11,20 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :diabetes %><br />
-    <%= f.check_box :diabetes %>
+  <div>
+    
+      <span> <%= f.check_box :diabetes %> Diabetes</span>
   </div>
-  <div class="field">
-    <%= f.label :asthma %><br />
-    <%= f.text_field :asthma %>
+  <div>
+    
+    <span> <%= f.check_box :hypertension %> Hypertension</span>
   </div>
-  <div class="field">
-    <%= f.label :patient %><br />
-    <%= f.text_field :patient %>
+  <div>
+    
+    <span> <%= f.check_box :asthma %> asthma</span>
   </div>
-  <div class="actions">
-    <%= f.submit %>
+  
+    <div class="text-center">
+    <%= f.submit "Add", class: "btn btn-primary my-3" %>
   </div>
 <% end %>

@@ -2,10 +2,12 @@
 
 one:
   diabetes: false
-  asthma: MyString
+  hypertension: false
+  asthma: false
   patient: one
 
 two:
   diabetes: false
-  asthma: MyString
+  hypertension: false
+  asthma: false
   patient: two
