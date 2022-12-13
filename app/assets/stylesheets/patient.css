@@ -1,0 +1,56 @@
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap");
+
+.table {
+  width: 300px !important;
+}
+
+.patient-image {
+  width: 200px !important;
+  border-radius: 50% !important;
+  height: 200px !important;
+}
+
+.conditions-list {
+  background-color: #f5f5f5;
+}
+
+.conditions-list li {
+  list-style: none;
+  padding: 10px 15px;
+  border-bottom: 1px solid #ccc;
+}
+
+.patient-code {
+  margin-top: -15%;
+  margin-left: 5rem;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 20% 80%;
+  grid-gap: 10px;
+  padding: 10px;
+}
+
+.patient-sidebar {
+  border-right: 5px solid #ccc;
+  height: 100vh;
+}
+
+.patient-title {
+  margin-left: 1.5rem;
+}
+
+.patient-line {
+  border-right: 1px solid grey;
+  height: 170px;
+}
+
+.patient-name {
+  margin-left: 2.5rem;
+  color: #455257;
+}
+
+.patient-bio {
+  margin-left: 3rem;
+}
