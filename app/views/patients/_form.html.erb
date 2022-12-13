@@ -1,4 +1,9 @@
+<div class="signup-form">
+<section class="signup-content">
 <%= form_with(model: patient) do |form| %>
+  <div class="splash-image">
+      <%= image_tag "logo.png" , class: "logo-img" %>
+  </div>
   <% if patient.errors.any? %>
     <div style="color: red">
       <h2><%= pluralize(patient.errors.count, "error") %> prohibited this patient from being saved:</h2>
@@ -11,27 +16,47 @@
     </div>
   <% end %>
 
-  <div>
-    <%= form.label :name, style: "display: block" %>
-    <%= form.text_field :name %>
-  </div>
+  <div class="text-center">
+      <div class="form-group d-flex justify-content-center">
+        <div class="d-flex flex-column">
 
-  <div>
-    <%= form.label :image, style: "display: block" %>
-    <%= form.text_field :image %>
-  </div>
+              <%= form.label :date_of_birth, class: "form-label d-flex justify-content-start" %>
+              <%= form.date_field :date_of_birth , class: "form-control w-100 form-input" %>
+          </div>
+      </div>
 
-  <div>
-    <%= form.label :national_id, style: "display: block" %>
-    <%= form.text_field :national_id %>
-  </div>
+      <div class="form-group d-flex justify-content-center">
+        <div class="d-flex flex-column">
 
-  <div>
-    <%= form.label :gender, style: "display: block" %>
-    <%= form.text_field :gender %>
-  </div>
+          <%= form.label :first_name, class: "form-label d-flex justify-content-start" %>
+          <%= form.text_field :first_name , class: "form-control form-input" %>
+          </div>
+      </div>
+      <div class="form-group d-flex justify-content-center">
+          <div class="d-flex flex-column">
 
-  <div>
-    <%= form.submit %>
-  </div>
+                <%= form.label :telephone, class: "form-label d-flex justify-content-start" %>
+                <%= form.text_field :telephone , class: "form-control form-input" %>
+            </div>
+      </div>
+
+
+      <div class="form-group d-flex justify-content-center">
+          <div class="d-flex flex-column">
+
+                <%= form.label :gender, class: "form-label d-flex justify-content-start" %>
+                <%= form.select :gender, options_for_select([ "Male", "Female", "Prefer not to say"]), class: "form-control w-100 rounded form-input" %>
+            </div>
+      </div>
+      <div class="form-group d-flex justify-content-center">
+          <div class="d-flex flex-column">
+
+                <%= form.label :blood_group, class: "form-label d-flex justify-content-start" %>
+                <%= form.select :blood_group, options_for_select([ "A+", "A-", "B+", "B-", "AB+", "AB-", "O+", "O-"]), class: "form-control w-50 form-input" %>
+            </div>
+      </div>
+
+
 <% end %>
+</section>
+</div>
