@@ -10,7 +10,7 @@ Lifeline medical records is a solution that is used to create, update and read m
 git clone https://github.com/PLPHackathon/level_2_lifeline_solution.git
 
 ```bash
-- cd team_Limon_arsenal_life_line
+- cd level_2_lifeline_solution
 - rails s
 ```
 
