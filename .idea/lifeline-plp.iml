@@ -66,6 +66,7 @@
     <orderEntry type="library" scope="PROVIDED" name="mini_mime (v1.1.2, rbenv: 3.1.2) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="minitest (v5.16.3, rbenv: 3.1.2) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="msgpack (v1.6.0, rbenv: 3.1.2) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="nested_scaffold (v1.1.0, rbenv: 3.1.2) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="net-imap (v0.3.2, rbenv: 3.1.2) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="net-pop (v0.1.2, rbenv: 3.1.2) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="net-protocol (v0.2.1, rbenv: 3.1.2) [gem]" level="application" />
@@ -134,6 +135,15 @@
         <option value="migration" />
         <option value="model" />
         <option value="mongoid:devise" />
+        <option value="nested_scaffold:active_record" />
+        <option value="nested_scaffold:erb" />
+        <option value="nested_scaffold:haml" />
+        <option value="nested_scaffold:helper" />
+        <option value="nested_scaffold:helper:test_unit" />
+        <option value="nested_scaffold:model:test_unit" />
+        <option value="nested_scaffold:nested_scaffold" />
+        <option value="nested_scaffold:scaffold:test_unit" />
+        <option value="nested_scaffold:scaffold_controller" />
         <option value="resource" />
         <option value="responders:install" />
         <option value="responders_controller" />
@@ -172,6 +182,15 @@
         <option value="migration" />
         <option value="model" />
         <option value="mongoid:devise" />
+        <option value="nested_scaffold:active_record" />
+        <option value="nested_scaffold:erb" />
+        <option value="nested_scaffold:haml" />
+        <option value="nested_scaffold:helper" />
+        <option value="nested_scaffold:helper:test_unit" />
+        <option value="nested_scaffold:model:test_unit" />
+        <option value="nested_scaffold:nested_scaffold" />
+        <option value="nested_scaffold:scaffold:test_unit" />
+        <option value="nested_scaffold:scaffold_controller" />
         <option value="resource" />
         <option value="responders:install" />
         <option value="responders_controller" />
