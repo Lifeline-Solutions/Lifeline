@@ -14,10 +14,13 @@ class PatientsTest < ApplicationSystemTestCase
     visit patients_url
     click_on 'New patient'
 
+    fill_in 'Doctor', with: @patient.doctor_id
+    fill_in 'First name', with: @patient.first_name
     fill_in 'Gender', with: @patient.gender
     fill_in 'Image', with: @patient.image
-    fill_in 'Name', with: @patient.name
+    fill_in 'Last name', with: @patient.last_name
     fill_in 'National', with: @patient.national_id
+    fill_in 'Telephone', with: @patient.telephone
     click_on 'Create Patient'
 
     assert_text 'Patient was successfully created'
@@ -28,10 +31,13 @@ class PatientsTest < ApplicationSystemTestCase
     visit patient_url(@patient)
     click_on 'Edit this patient', match: :first
 
+    fill_in 'Doctor', with: @patient.doctor_id
+    fill_in 'First name', with: @patient.first_name
     fill_in 'Gender', with: @patient.gender
     fill_in 'Image', with: @patient.image
-    fill_in 'Name', with: @patient.name
+    fill_in 'Last name', with: @patient.last_name
     fill_in 'National', with: @patient.national_id
+    fill_in 'Telephone', with: @patient.telephone
     click_on 'Update Patient'
 
     assert_text 'Patient was successfully updated'

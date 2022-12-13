@@ -7,10 +7,10 @@ Lifeline medical records is a solution that is used to create, update and read m
 ![ERD Diagram1 (2)](https://user-images.githubusercontent.com/48310207/201509109-1173932a-9df2-49ab-bf94-31e20ec3fb17.jpg)
 
 ## Cloning the Project
-git clone https://github.com/PLPHackathon/level_2_lifeline_solution.git
+git clone https://github.com/valuechainfactory/team_Limon_arsenal_life_line.git
 
 ```bash
-- cd level_2_lifeline_solution
+- cd team_Limon_arsenal_life_line
 - rails s
 ```
 
@@ -86,7 +86,7 @@ rspec
 ## 🤝 Contributing
 
 Contributions, issues, and feature requests are welcome!
-Feel free to check the [issues](https://github.com/PLPHackathon/level_2_lifeline_solution/issues)
+Feel free to check the [Issues](https://github.com/MICHAELMUNAVU83/no-app-for-this-lifeline/issues).
 
 ## Show your support
 

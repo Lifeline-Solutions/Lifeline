@@ -3,6 +3,7 @@
 <table>
   <tr>
     <th>Diabetes</th>
+    <th>Hypertension</th>
     <th>Asthma</th>
     <th>Patient</th>
     <th></th>
@@ -13,6 +14,7 @@
 <% @pre_existing_conditions.each do |pre_existing_condition| %>
   <tr>
     <td><%= pre_existing_condition.diabetes %></td>
+    <td><%= pre_existing_condition.hypertension %></td>
     <td><%= pre_existing_condition.asthma %></td>
     <td><%= pre_existing_condition.patient %></td>
     <td><%= link_to 'Show', [pre_existing_condition.patient, pre_existing_condition] %></td>

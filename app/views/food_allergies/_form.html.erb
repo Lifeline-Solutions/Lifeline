@@ -10,16 +10,15 @@
       </ul>
     </div>
   <% end %>
+ 
 
-  <div class="field">
-    <%= f.label :name %><br />
-    <%= f.text_field :name %>
-  </div>
-  <div class="field">
-    <%= f.label :patient %><br />
-    <%= f.text_field :patient %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
+   <div class="text-center">
+        
+        <%= f.text_field :name %>
+      </div>
+
+
+  <div class="text-center">
+    <%= f.submit  class: "btn btn-primary my-3" %>
   </div>
 <% end %>

@@ -1,6 +1,7 @@
 class DrugAllergiesController < ApplicationController
   before_action :set_patient
   before_action :set_drug_allergy, only: %i[show edit update destroy]
+  before_action :authenticate_doctor!, only: %i[new edit create update]
 
   # GET patients/1/drug_allergies
   def index
@@ -23,7 +24,7 @@ class DrugAllergiesController < ApplicationController
     @drug_allergy = @patient.drug_allergies.build(drug_allergy_params)
 
     if @drug_allergy.save
-      redirect_to([@drug_allergy.patient, @drug_allergy], notice: 'Drug allergy was successfully created.')
+      redirect_to(@drug_allergy.patient)
     else
       render action: 'new'
     end

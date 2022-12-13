@@ -1,6 +1,7 @@
 class FoodAllergiesController < ApplicationController
   before_action :set_patient
   before_action :set_food_allergy, only: %i[show edit update destroy]
+  before_action :authenticate_doctor!, only: %i[new edit create update]
 
   # GET patients/1/food_allergies
   def index
@@ -23,7 +24,7 @@ class FoodAllergiesController < ApplicationController
     @food_allergy = @patient.food_allergies.build(food_allergy_params)
 
     if @food_allergy.save
-      redirect_to([@food_allergy.patient, @food_allergy], notice: 'Food allergy was successfully created.')
+      redirect_to(@food_allergy.patient)
     else
       render action: 'new'
     end

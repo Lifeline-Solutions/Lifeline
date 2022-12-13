@@ -1,6 +1,11 @@
-<h1>Editing pre_existing_condition</h1>
+<h2 class="text-center text-decoration-underline">Edit A Pre Existing Condition</h2>
+<div class="text-center">
 
-<%= render 'form' %>
+    <%= render 'form' %>
+</div>
 
-<%= link_to 'Show', [@pre_existing_condition.patient, @pre_existing_condition] %> |
-<%= link_to 'Back', patient_pre_existing_conditions_path(@pre_existing_condition.patient) %>
+
+ <div class="text-center">
+    <%= link_to 'Back', (@pre_existing_condition.patient) , class: "btn btn-danger" %>
+
+</div>
