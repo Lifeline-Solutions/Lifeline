@@ -136,11 +136,29 @@
     </div>
 
 </div>
+
+
     </div>
+
+  
+
+
+    <div class="medical-history">
+    <h5 class="header--blue">Patient Notes </h5>
+      <% if patient.visits.any? %>
+      <% patient.visits.each do |visit| %>
+      <p> <%= visit.doctor_comments %> </p>
+      by Doctor <%= visit.patient.doctor.name %>
+    
+      <% end %>
+      <% end %>
+    </div>
+  </div>
 
     <div class="container text-center my-3">
     <button class="btn btn-light"><%= link_to "Add food allergy" , new_patient_food_allergy_path(@patient) %></button>
     <button class="btn btn-light ms-5"><%= link_to "Add drug allergy" , new_patient_drug_allergy_path(@patient) %></button>
+    <button class="btn btn-light ms-5"><%= link_to "Add visit note" , new_patient_visit_path(@patient) %></button>
     <% if @patient.pre_existing_condition_count == 0 %>
     <%= link_to "Add pre existing condition" , new_patient_pre_existing_condition_path(@patient) %>
     <% end %>

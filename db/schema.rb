@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_12_01_202432) do
+ActiveRecord::Schema[7.0].define(version: 2023_01_19_040656) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -112,6 +112,14 @@ ActiveRecord::Schema[7.0].define(version: 2022_12_01_202432) do
     t.index ["patient_id"], name: "index_pre_existing_conditions_on_patient_id"
   end
 
+  create_table "visits", force: :cascade do |t|
+    t.string "doctor_comments"
+    t.bigint "patient_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["patient_id"], name: "index_visits_on_patient_id"
+  end
+
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
   add_foreign_key "active_storage_variant_records", "active_storage_blobs", column: "blob_id"
   add_foreign_key "drug_allergies", "patients"
@@ -119,4 +127,5 @@ ActiveRecord::Schema[7.0].define(version: 2022_12_01_202432) do
   add_foreign_key "next_of_kins", "patients"
   add_foreign_key "patients", "doctors"
   add_foreign_key "pre_existing_conditions", "patients"
+  add_foreign_key "visits", "patients"
 end
