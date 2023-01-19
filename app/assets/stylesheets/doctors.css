@@ -50,12 +50,6 @@ body {
   border-radius: 2rem !important;
 }
 
-/* .log-in {
-  margin-left: 4rem;
-  border-radius: 2rem !important;
-  padding: 0.45rem 1rem !important;
-} */
-
 .login-page {
   align-items: center;
   overflow-y: hidden;
@@ -75,7 +69,7 @@ body {
 .life-logo {
   max-width: 150px;
   color: #fff;
-  filter: invert(1%) sepia(1%) saturate(1%) hue-rotate(1deg) brightness(1000%) contrast(80%);
+  filter: brightness(0) invert(1);
 }
 
 .lifeline-logo {
@@ -157,4 +151,17 @@ body {
 .sign-page {
   height: 100vh;
   overflow-y: hidden !important;
+}
+
+.sign-page .login-image {
+  background: #c7e8f0;
+}
+
+.sign-page .lifeline-text > * {
+  color: #29abe2;
+  filter: sepia(100%) hue-rotate(190deg) saturate(500%);
+}
+
+.sign-page .life-logo {
+  filter: sepia(100%) hue-rotate(190deg) saturate(500%);
 }
