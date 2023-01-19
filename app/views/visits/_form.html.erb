@@ -11,15 +11,16 @@
     </div>
   <% end %>
 
-  <div class="field">
+  <div class="field d-flex justify-content-center ">
+  <div class="form-group">
     <%= f.label :doctor_comments %><br />
-    <%= f.text_field :doctor_comments %>
+    <%= f.text_field :doctor_comments , class: "form-control", style: "height: 200px ; width: 500px" %>
+   </div>
   </div>
-  <div class="field">
-    <%= f.label :patient %><br />
-    <%= f.text_field :patient %>
+ 
+  <div class="actions d-flex justify-content-center">
+    <%= f.submit  class: "btn btn-primary my-3 " , value: "Add Comment for Patient" %>
   </div>
-  <div class="actions">
-    <%= f.submit %>
+  
   </div>
 <% end %>

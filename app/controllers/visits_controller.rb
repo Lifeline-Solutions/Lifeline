@@ -7,6 +7,10 @@ class VisitsController < ApplicationController
     @visits = @patient.visits
   end
 
+  def recent_visits
+    @visits = @patient.visits.order('created_at DESC').limit(5)
+  end
+
   # GET patients/1/visits/1
   def show
   end
@@ -25,7 +29,7 @@ class VisitsController < ApplicationController
     @visit = @patient.visits.build(visit_params)
 
     if @visit.save
-      redirect_to([@visit.patient, @visit], notice: 'Visit was successfully created.')
+      redirect_to(@visit.patient)
     else
       render action: 'new'
     end
