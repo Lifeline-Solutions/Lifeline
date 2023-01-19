@@ -1,6 +1,6 @@
 class VisitsController < ApplicationController
   before_action :set_patient
-  before_action :set_visit, only: [:show, :edit, :update, :destroy]
+  before_action :set_visit, only: %i[show edit update destroy]
   before_action :authenticate_doctor!, only: %i[new edit create update]
 
   # GET patients/1/visits
@@ -13,8 +13,7 @@ class VisitsController < ApplicationController
   end
 
   # GET patients/1/visits/1
-  def show
-  end
+  def show; end
 
   # GET patients/1/visits/new
   def new
@@ -22,8 +21,7 @@ class VisitsController < ApplicationController
   end
 
   # GET patients/1/visits/1/edit
-  def edit
-  end
+  def edit; end
 
   # POST patients/1/visits
   def create
@@ -53,17 +51,18 @@ class VisitsController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_patient
-      @patient = Patient.find(params[:patient_id])
-    end
 
-    def set_visit
-      @visit = @patient.visits.find(params[:id])
-    end
+  # Use callbacks to share common setup or constraints between actions.
+  def set_patient
+    @patient = Patient.find(params[:patient_id])
+  end
 
-    # Only allow a trusted parameter "white list" through.
-    def visit_params
-      params.require(:visit).permit(:doctor_comments, :patient_id)
-    end
+  def set_visit
+    @visit = @patient.visits.find(params[:id])
+  end
+
+  # Only allow a trusted parameter "white list" through.
+  def visit_params
+    params.require(:visit).permit(:doctor_comments, :patient_id)
+  end
 end
