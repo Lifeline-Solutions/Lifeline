@@ -1,6 +1,7 @@
 class VisitsController < ApplicationController
   before_action :set_patient
   before_action :set_visit, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_doctor!, only: %i[new edit create update]
 
   # GET patients/1/visits
   def index
