@@ -134,6 +134,7 @@ body {
 
 .sign-page .signup-form {
   top: 2rem;
+  left: 55%;
 }
 
 .splash-hide {
@@ -151,10 +152,6 @@ body {
 
 .sign-page h4 {
   margin-left: -2rem !important;
-}
-
-.sign-page .signup-form {
-  left: 55%;
 }
 
 .sign-page {
