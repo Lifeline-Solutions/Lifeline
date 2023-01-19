@@ -50,12 +50,6 @@ body {
   border-radius: 2rem !important;
 }
 
-/* .log-in {
-  margin-left: 4rem;
-  border-radius: 2rem !important;
-  padding: 0.45rem 1rem !important;
-} */
-
 .login-page {
   align-items: center;
   overflow-y: hidden;
@@ -75,7 +69,7 @@ body {
 .life-logo {
   max-width: 150px;
   color: #fff;
-  filter: invert(1%) sepia(1%) saturate(1%) hue-rotate(1deg) brightness(1000%) contrast(80%);
+  filter: brightness(0) invert(1);
 }
 
 .lifeline-logo {
@@ -132,16 +126,9 @@ body {
   max-width: 300px;
 }
 
-.signup-content {
-  width: 50%;
-  margin: 1rem auto;
-  padding: 2rem;
-  box-shadow: rgba(0, 0, 0, 0.12) 0 1px 3px, rgba(0, 0, 0, 0.24) 0 1px 2px;
-  border-radius: 1rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+.sign-page .signup-form {
+  top: 2rem;
+  left: 55%;
 }
 
 .splash-hide {
@@ -151,4 +138,30 @@ body {
 
 .home-icon {
   color: white;
+}
+
+.sign-page .form-control {
+  margin-left: 1rem !important;
+}
+
+.sign-page h4 {
+  margin-left: -2rem !important;
+}
+
+.sign-page {
+  height: 100vh;
+  overflow-y: hidden !important;
+}
+
+.sign-page .login-image {
+  background: #c7e8f0;
+}
+
+.sign-page .lifeline-text > * {
+  color: #29abe2;
+  filter: sepia(100%) hue-rotate(190deg) saturate(500%);
+}
+
+.sign-page .life-logo {
+  filter: sepia(100%) hue-rotate(190deg) saturate(500%);
 }
