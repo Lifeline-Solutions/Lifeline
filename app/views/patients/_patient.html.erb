@@ -3,7 +3,7 @@
         <!-- Sidebar  -->
         <nav id="sidebar">
            <div class="splash-image">
-      <%= image_tag "lifeline-logo-white.png" , class: "logo-img" %>
+      <%= image_tag "lifeline-new.png" , class: "logo-img" %>
   </div>
 
             <ul class="list-unstyled components text-light hide">
@@ -143,17 +143,25 @@
   
 
 
-    <div class="medical-history">
-    <h5 class="header--blue">Patient Notes </h5>
-      <% if patient.visits.any? %>
-      <% patient.visits.each do |visit| %>
-      <p> <%= visit.doctor_comments %> </p>
-      by Doctor <%= visit.patient.doctor.name %>
-    
-      <% end %>
-      <% end %>
-    </div>
+   
   </div>
+
+
+  <div class=" container my-5 w-100 shadow-lg p-3 mb-5  rounded medical-history">
+  <h5 class="header--blue">Patient Notes </h5>
+    <% if patient.visits.any? %>
+    <div class="d-flex flex-column ">
+    <% patient.visits.each do |visit| %>
+      <span class="text-secondary"> <%= visit.doctor_comments %> by Doctor <%= visit.patient.doctor.name %> </span>
+ 
+   
+  
+    <% end %>
+    </div>
+    <% end %>
+  </div>
+
+  
 
     <div class="container text-center my-3">
     <button class="btn btn-light"><%= link_to "Add food allergy" , new_patient_food_allergy_path(@patient) %></button>
