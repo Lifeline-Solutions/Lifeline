@@ -52,7 +52,7 @@ body {
   padding: 0.45rem 1rem !important;
 }
 
-.login-page {
+/* .login-page {
   height: 100vh;
   background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('login.jpg');
   background-repeat: no-repeat;
@@ -62,7 +62,7 @@ body {
   justify-content: center;
   align-items: center;
   color: #fff;
-}
+} */
 
 .account {
   font-size: 0.7rem;
